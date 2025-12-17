@@ -56,3 +56,7 @@ The core of the script computes cumulative and top-3 prior performance metrics f
 - ***Preparing_dataset_log_scaled_number_votes.ipnyb**; this changes the target variable from being average rating multiplied with number of reviews, to instead being number of reviews. The target variable is still log transformed.
 
 ## Splitting_dataset.ipynb
+This script prepares a movie dataset for machine learning by cleaning and transforming the data and splitting it into training and test sets using a time-based approach. It handles missing actor and director information with consistent default values, fills missing runtimes using yearly averages, and performs feature engineering by encoding genres and runtime categories. Unused identifiers and metadata are removed, and the training and test datasets are aligned to ensure identical feature dimensions before being saved for downstream modeling.
+
+## Learning.ipynb
+This notebook 

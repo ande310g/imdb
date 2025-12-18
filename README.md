@@ -56,3 +56,30 @@ The core of the script computes cumulative and top-3 prior performance metrics f
 - ***Preparing_dataset_log_scaled_number_votes.ipnyb**; this changes the target variable from being average rating multiplied with number of reviews, to instead being number of reviews. The target variable is still log transformed.
 
 ## Splitting_dataset.ipynb
+This script prepares a movie dataset for machine learning by cleaning and transforming the data and splitting it into training and test sets using a time-based approach. It handles missing actor and director information with consistent default values, fills missing runtimes using yearly averages, and performs feature engineering by encoding genres and runtime categories. Unused identifiers and metadata are removed, and the training and test datasets are aligned to ensure identical feature dimensions before being saved for downstream modeling.
+
+## Learning.ipynb
+This notebook in general trains and tunes a given model to predict a given target variable. It loads and sorstss the data in the correct temporal order, separates features and target variable and drops unused columns. The model is than trained on the training dataset and the best model is saved to disk for later use.
+
+## Training.ipynb
+This notebook loads in the trained model and tests it on the not seen test dataset. It returns the models precision based on 3 criteria MAE (Mean Absolute Error), RSME (Root Squared Mean Error) and R². R² is calculated in the log space if the dataset have been transformed prior, where the two others are calculated in the original number space, by transforming them back if necessary.
+
+# Models
+
+## Linear_Regression
+
+## Lasso
+
+## Ridge
+
+## Polynomial
+
+## Random_Forrest
+
+## XGBoost:
+
+#### XGBoost_First_Iteration
+#### XGBoost_Log_Transformed
+#### XGBoost_Number_Votes
+#### XGBoost_Over_1000_Votes
+#### XGBoost_Tweedie

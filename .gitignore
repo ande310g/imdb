@@ -161,6 +161,6 @@ cython_debug/
 data/*
 *.csv
 
-Random_Forest/*.joblib
 .DS_Store
 src/.DS_Store
+src/Random_Forest/random_forest_reg_movie_log_transformed.joblib

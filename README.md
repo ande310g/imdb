@@ -5,7 +5,7 @@ Multiple supervised regression models are implemented and compared, including li
 
 Models are evaluated using MAE, RMSE, and R² on a chronological train/test split to reflect real-world prediction scenarios. Overall, the project aims to balance predictive performance with interpretability and treats the models as decision-support tools rather than definitive predictors of success.
 
-In the assignment the two primary XGBoost model described is XGBoost_Number_Votes. 
+In the assignment the primary XGBoost model described is XGBoost_Number_Votes. 
 
 # Prerequists
 ## Python version

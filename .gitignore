@@ -164,3 +164,4 @@ data/*
 .DS_Store
 src/.DS_Store
 src/Random_Forest/random_forest_reg_movie_log_transformed.joblib
+.DS_Store

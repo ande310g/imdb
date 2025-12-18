@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 data/*
 *.csv
+
+.DS_Store
+src/.DS_Store
+src/Random_Forest/random_forest_reg_movie_log_transformed.joblib

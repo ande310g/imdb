@@ -65,21 +65,26 @@ This notebook in general trains and tunes a given model to predict a given targe
 This notebook loads in the trained model and tests it on the not seen test dataset. It returns the models precision based on 3 criteria MAE (Mean Absolute Error), RSME (Root Squared Mean Error) and R². R² is calculated in the log space if the dataset have been transformed prior, where the two others are calculated in the original number space, by transforming them back if necessary.
 
 # Models
-
+Below is quick description of the different models and their variations.
 ## Linear_Regression
-
+This models the dataset using a linear regression model.
 ## Lasso
-
+This models the dataset using Lasso which is a linear regression with L1 normalization. The model is trained using GridSearchCV to find an optimal alpha.
 ## Ridge
-
+This models the dataset using Ridge which is linear regression model with L2 normalization. The model trained using GridSearch to find the optimal alpha.
 ## Polynomial
-
+The polynomial this tries to fit a 2 degree polynomial to the dataset.
 ## Random_Forrest
-
+This folder trains to random forrest models, one that uses tuning for hyperparameters and one that doesn't. 
 ## XGBoost:
-
+These models are variations of the same model, they all try and model future prediction using XGBoost. They all use TimeSeriesSplit to keep the temporal order for cross-validation and uses RandomizedSearchCV to find the best hyperparameters for the model.
 #### XGBoost_First_Iteration
+This model uses the target variable that is average rating times number of reviews. 
 #### XGBoost_Log_Transformed
+This model uses the a target variable that is average rating times number of reviews, but the data has been log transformed. 
 #### XGBoost_Number_Votes
+This model changes the target variable to be number of votes that is log transformed.
 #### XGBoost_Over_1000_Votes
+This model changes uses the target variable to be number of votes, but is only trained number of votes over 1000. This was to try and get a more precise model for more popular movies. The idea was to then create a classification algorithm, to sort them into over or under 1000 votes. 
 #### XGBoost_Tweedie
+This model uses the number of votes as variable but changes the objective scoring to use tweedie, this was to try and capture a better perspective of tail of data distribution. 
